@@ -1,15 +1,42 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TextArea?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-    <Button text="Button1" onAction="#saveTextButton"/>
-    <TextField fx:id="textField" promptText="Введите сообщение" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-    <Label fx:id="label" text="Text" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-    <TextArea fx:id="textArea" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+<!--<top>-->
+<!--    <MenuBar>-->
+<!--        <Menu text="File">-->
+<!--            <MenuItem text="Open" />-->
+<!--            <MenuItem text="Save" />-->
+<!--            <MenuItem text="Close" />-->
+<!--            <MenuItem onAction="#exitClick" text="Exit" />-->
+<!--        </Menu>-->
+<!--    </MenuBar>-->
+<!--</top>-->
+<!--    <bottom>-->
+<!--        <TextField promptText="Your Message" prefHeight="170.0" prefWidth="200.0" />-->
+<!--    </bottom>-->
+<!--   <center>-->
+<!--      <TextArea prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />-->
+<!--   </center>-->
+
+
+<GridPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+   <children>
+      <TextArea  fx:id="textArea" prefHeight="600" prefWidth="500" GridPane.columnIndex="1" />
+      <TextField fx:id="textField" promptText="Your Message" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#textFieldSendButton" />
+      <Button mnemonicParsing="false" text="Send" GridPane.rowIndex="2" onAction="#sendTextButton" />
+   </children>
 </GridPane>
+
+
+
+<!--<MenuBar>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Menu text="File">&ndash;&gt;-->
+<!--&lt;!&ndash;                <MenuItem text="Open" />&ndash;&gt;-->
+<!--&lt;!&ndash;                <MenuItem text="Save" />&ndash;&gt;-->
+<!--&lt;!&ndash;                <MenuItem text="Close" />&ndash;&gt;-->
+<!--&lt;!&ndash;                <MenuItem onAction="#exitClick" text="Exit" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </Menu>&ndash;&gt;-->
+<!--&lt;!&ndash;        </MenuBar>-->
